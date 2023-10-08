@@ -1,7 +1,9 @@
 from flask import Flask, render_template
+from flask_cors import CORS
 from handlers.convert import convert
 
 app = Flask(__name__)
+cors = CORS(app, origins=['*'])
 
 @app.route('/')
 def home():
